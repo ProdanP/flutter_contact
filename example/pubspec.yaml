@@ -16,10 +16,11 @@ dependencies:
     sdk: flutter
   flutter_platform_widgets: ^1.9.5
   full_text_search: ^0.8.0+2
+
   intl: ^0.17.0
   logging: ^1.0.1
   logging_config: ^0.6.7+7
-  permission_handler: ^8.1.4+2
+  permission_handler: ^6.1.1
   quiver: ^3.0.1
   uuid: ^3.0.4
 

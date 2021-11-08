@@ -36,7 +36,7 @@ abstract class FlutterContactPlugin() : ContactExtensions, EventChannel.StreamHa
     protected fun getContacts(query: String?, withThumbnails: Boolean, photoHighResolution: Boolean,
                               sortBy: String? = null,
                               phoneQuery: Boolean?, offset: Int?, limit: Int?): StructList {
-
+        println("FlutterContactPlugin getContacts")
         val contacts = resolver.queryContacts(query, sortBy)
                 ?.toContactList(mode, limit ?: 30, offset ?: 0)
                 ?.onEach { contact ->
