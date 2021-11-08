@@ -44,8 +44,10 @@ abstract class FlutterContactPlugin() : ContactExtensions, EventChannel.StreamHa
                         contact.setAvatarDataForContactIfAvailable(photoHighResolution)
                     }
                 } ?: emptyList()
-
-        return contacts.map { it.toMap() }
+        println("FlutterContactPlugin end contacts.size " + contacts.size)
+        val mappedContacts = contacts.map { it.toMap() }
+        println("FlutterContactPlugin end mappedContacts.size " + mappedContacts.size)
+        return mappedContacts
     }
 
     protected fun getTotalContacts(query: String?, phoneQuery: Boolean?): Int {

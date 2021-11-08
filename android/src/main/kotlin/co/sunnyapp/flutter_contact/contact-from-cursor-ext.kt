@@ -27,6 +27,7 @@ interface ContactExtensions {
     @SuppressLint("Recycle")
     fun ContentResolver.queryContacts(query: String? = null, sortBy: String? = null,
                                       forCount: Boolean = false): Cursor? {
+        println("FlutterContactPlugin queryContacts ")
 
         var selectionArgs = when (forCount) {
             true -> arrayOf()
